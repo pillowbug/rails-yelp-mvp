@@ -1,0 +1,14 @@
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="card p-3 m-5 w-75">
+    <h1><%= @restaurant.name %></h1>
+    <p><%= @restaurant.address  %></p>
+    <p><%= @restaurant.category  %></p>
+    <%= link_to "Go home", restaurants_path %>
+    <%= link_to "Leave a review", new_restaurant_review_path(@restaurant) %>
+  <h2>Reviews</h2>
+
+  <% @reviews.each do |review| %>
+  <%= review.content  %>
+  <% end  %>
+  </div>
+</div>
